@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kanban-angular-firestore": {
+      "hosting": {
+        "drag-drop": [
+          "kanban-angular-firestore"
+        ]
+      }
+    }
+  }
+}

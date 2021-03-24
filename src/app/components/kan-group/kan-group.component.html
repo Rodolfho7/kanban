@@ -1,0 +1,12 @@
+<div class="container">
+  <mat-expansion-panel class="item mat-elevation-z0" [ngClass]="color" expanded>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ name }}
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-content></ng-content>
+  </mat-expansion-panel>
+</div>

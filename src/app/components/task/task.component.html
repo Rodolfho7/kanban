@@ -1,0 +1,6 @@
+<mat-card class="item mat-elevation-z0" (dblclick)="edit.emit(task)" color="warn">
+  <div class="item-title">
+    <h2>{{ task?.title }}</h2><mat-icon>{{ iconName }}</mat-icon>
+  </div>
+  <p>{{ task?.description }}</p>
+</mat-card>

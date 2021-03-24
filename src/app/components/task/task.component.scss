@@ -1,0 +1,27 @@
+:host {
+  display: block;
+}
+
+.item {
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: rgb(243, 243, 243);
+  color: black;
+
+  .item-title {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.red {
+  border-top: 10px solid rgb(177, 48, 1);
+}
+
+.blue {
+  border-top: 10px solid rgb(41, 68, 150);
+}
+
+.green {
+  border-top: 10px solid rgb(0, 107, 0);
+}
