@@ -7,7 +7,6 @@ import { Task } from '../../interfaces/task';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent implements OnInit {
-  @Input() borderColor: string;
   @Input() iconName: string;
   @Input() task: Task | undefined;
   @Output() edit = new EventEmitter();

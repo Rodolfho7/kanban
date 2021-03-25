@@ -1,0 +1,27 @@
+<div class="content-wrapper">
+  <div class="title">
+    <h1>Meus Projetos</h1><mat-icon (click)="createNewProject()">add</mat-icon>
+  </div>
+  <app-expansion *ngFor="let project of projects"
+    [name]="project.name"
+    cdkDropList
+    [cdkDropListData]="project.list"
+    (cdkDropListDropped)="drop(project, $event)"
+  >
+    <div class="dash-header">
+      <span>Name</span>
+      <span>person</span>
+      <span>status</span>
+      <span>comments</span>
+    </div>
+    <div class="dash-item" *ngFor="let item of project.list" cdkDrag>
+      <span>{{ item.name }}</span>
+      <span><app-avatar [img]="img"></app-avatar></span>
+      <span class="doing">{{ item.status }}</span>
+      <span><mat-icon class="icon" matBadge="4">message</mat-icon></span>
+    </div>
+    <div class="dash-item-new">
+      <input type="text" [(ngModel)]="newItem" placeholder="+ Nova tarefa" (keyup.enter)="addItem(project)">
+    </div>
+  </app-expansion>
+</div>

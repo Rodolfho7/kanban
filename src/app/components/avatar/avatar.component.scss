@@ -1,0 +1,12 @@
+@import '../../../styles/colors.scss';
+
+img {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: $gray;
+  object-fit: cover;
+  display: flex;
+}

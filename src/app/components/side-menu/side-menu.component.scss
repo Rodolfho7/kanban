@@ -1,0 +1,129 @@
+@import '../../../styles/colors.scss';
+
+.container {
+  position: fixed;
+  top:0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+
+  .navigation {
+    position: relative;
+    width: 60px;
+    height: 100vh;
+    background-color: $primary;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 999;
+
+    &.open {
+      width: 200px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5)
+    }
+    .userContent {
+      position: absolute;
+      bottom: 10px;
+      left: 7px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .user {
+        border:3px solid $white;
+        background-color: $primary;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 10px;
+        margin-bottom: 12px;
+
+        app-avatar {
+          cursor: pointer;
+        }
+      }
+      .user-name {
+        color: $white;
+      }
+      span {
+        flex-shrink: 0;
+      }
+    }
+
+    ul {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+      li {
+        position: relative;
+        list-style: none;
+        width: 100%;
+
+        &:hover {
+          background-color: $primary-light;
+          cursor: pointer;
+        }
+      }
+
+      a {
+        position: relative;
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        color: $white;
+        font-weight: 500;
+
+        .icon {
+          position: relative;
+          display: block;
+          min-width: 60px;
+          height: 60px;
+          line-height: 60px;
+          text-align: center;
+          font-size: 24px;
+        }
+
+        .title {
+          position: relative;
+          display: block;
+          height: 60px;
+          line-height: 60px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .toggle {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background-color: $primary;
+    cursor: pointer;
+    top: calc(50% - 20px);
+    left: 56px;
+    border: 5px solid $primary;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 998;
+
+    mat-icon {
+      color: $white;
+    }
+
+    &.open {
+      left: 196px;
+    }
+  }
+}
+
+.active {
+  background-color: $primary-light;
+}

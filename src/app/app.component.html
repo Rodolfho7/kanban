@@ -1,56 +1,6 @@
-<mat-toolbar color="primary">
-  <mat-icon>local_fire_department</mat-icon>
-  <span>Kanbanfire</span>
-</mat-toolbar>
-
-<div class="content-wrapper">
-  <button mat-flat-button color="primary" (click)="newTask()">
-    <mat-icon>add</mat-icon>Add Task
-  </button>
-  <div class="container-wrapper">
-    <app-kan-group
-      [name]="'BackLog'"
-      [color]="'red'"
-      id="todo"
-      cdkDropList
-      #todoList="cdkDropList"
-      [cdkDropListData]="todo | async"
-      (cdkDropListDropped)="drop($event)"
-      [cdkDropListConnectedTo]="[inProgressList, doneList]"
-    >
-      <p class="empty-label" *ngIf="(todo | async)?.length === 0">Empty</p>
-      <app-task [iconName]="backLogIcon" cdkDrag *ngFor="let task of todo | async" [task]="task" (edit)="edit('todo', $event)">
-      </app-task>
-    </app-kan-group>
-
-    <app-kan-group
-      [name]="'in Progress'"
-      [color]="'blue'"
-      id="inProgress"
-      cdkDropList
-      #inProgressList="cdkDropList"
-      [cdkDropListData]="inProgress | async"
-      (cdkDropListDropped)="drop($event)"
-      [cdkDropListConnectedTo]="[todoList, doneList]"
-    >
-      <p class="empty-label" *ngIf="(inProgress | async)?.length === 0">Empty</p>
-      <app-task [iconName]="inProgressIcon" cdkDrag *ngFor="let task of inProgress | async" [task]="task" (edit)="edit('inProgress', $event)">
-      </app-task>
-    </app-kan-group>
-
-    <app-kan-group
-      [name]="'Done'"
-      [color]="'green'"
-      id="done"
-      cdkDropList
-      #doneList="cdkDropList"
-      [cdkDropListData]="done | async"
-      (cdkDropListDropped)="drop($event)"
-      [cdkDropListConnectedTo]="[todoList, inProgressList]"
-    >
-      <p class="empty-label" *ngIf="(done | async)?.length === 0">Empty</p>
-      <app-task [iconName]="doneIcon" cdkDrag *ngFor="let task of done | async" [task]="task" (edit)="edit('done', $event)">
-      </app-task>
-    </app-kan-group>
+<div class="container">
+  <app-side-menu [menuOpened]="false"></app-side-menu>
+  <div class="main-content">
+    <router-outlet></router-outlet>
   </div>
 </div>

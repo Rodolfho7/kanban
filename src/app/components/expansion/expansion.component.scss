@@ -1,0 +1,19 @@
+@import '../../../styles/colors.scss';
+
+.container {
+  min-width: 300px;
+  margin: 0 25px 25px 0;
+
+  mat-expansion-panel {
+    margin-top: 2rem;
+
+    mat-panel-title {
+      font-weight: bold;
+      color: black;
+    }
+
+    mat-card {
+      border-top: 10px solid darkgreen;
+    }
+  }
+}

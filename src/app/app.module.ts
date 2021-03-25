@@ -16,17 +16,29 @@ import { TaskDialogComponent } from './components/task-dialog/task-dialog.compon
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatMenuModule } from '@angular/material/menu';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
-import { KanGroupComponent } from './components/kan-group/kan-group.component';
+import { ExpansionComponent } from './components/expansion/expansion.component';
+import { KanBanComponent } from './pages/kan-ban/kan-ban.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { NewProjectDialogComponent } from './components/new-project-dialog/new-project-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     TaskDialogComponent,
-    KanGroupComponent
+    ExpansionComponent,
+    KanBanComponent,
+    SideMenuComponent,
+    DashboardComponent,
+    AvatarComponent,
+    NewProjectDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +51,8 @@ import { KanGroupComponent } from './components/kan-group/kan-group.component';
     MatButtonModule,
     MatDialogModule,
     MatExpansionModule,
+    MatBadgeModule,
+    MatMenuModule,
     FormsModule,
     MatInputModule,
     AngularFireModule.initializeApp(environment.firebase),

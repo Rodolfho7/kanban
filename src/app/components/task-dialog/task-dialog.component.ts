@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Task } from '../../interfaces/task';
 import { TaskDialogData } from '../../interfaces/task-dialog-data';
@@ -8,7 +8,7 @@ import { TaskDialogData } from '../../interfaces/task-dialog-data';
   templateUrl: './task-dialog.component.html',
   styleUrls: ['./task-dialog.component.scss']
 })
-export class TaskDialogComponent implements OnInit {
+export class TaskDialogComponent {
   private backupTask: Partial<Task>;
 
   constructor(
@@ -16,9 +16,6 @@ export class TaskDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: TaskDialogData
   ) {
     this.backupTask = { ...this.data.task };
-  }
-
-  ngOnInit(): void {
   }
 
   cancel(): void {

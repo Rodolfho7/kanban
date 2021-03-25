@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KanGroupComponent } from './kan-group.component';
+import { NewProjectDialogComponent } from './new-project-dialog.component';
 
-describe('KanGroupComponent', () => {
-  let component: KanGroupComponent;
-  let fixture: ComponentFixture<KanGroupComponent>;
+describe('NewProjectDialogComponent', () => {
+  let component: NewProjectDialogComponent;
+  let fixture: ComponentFixture<NewProjectDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KanGroupComponent ]
+      declarations: [ NewProjectDialogComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KanGroupComponent);
+    fixture = TestBed.createComponent(NewProjectDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

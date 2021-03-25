@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="navigation" [ngClass]="menuOpened ? 'open' : ''">
+    <ul>
+      <li>
+        <a routerLink="/kanban" routerLinkActive="active">
+          <mat-icon class="icon">home</mat-icon>
+          <span class="title">Home</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active">
+          <mat-icon class="icon">person</mat-icon>
+          <span class="title">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon class="icon">message</mat-icon>
+          <span class="title">Message</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon class="icon">help</mat-icon>
+          <span class="title">Help</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon class="icon">settings</mat-icon>
+          <span class="title">Setting</span>
+        </a>
+      </li>
+    </ul>
+    <div class="userContent">
+      <div class="user">
+        <app-avatar [img]="img" [matMenuTriggerFor]="menu"></app-avatar>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Sair<mat-icon>power_settings_new</mat-icon></button>
+        </mat-menu>
+      </div>
+      <span class="user-name">Rodolfho azevedo</span>
+    </div>
+  </div>
+  <div class="toggle" [ngClass]="menuOpened ? 'open' : ''" (click)="toggleMenu()">
+    <mat-icon *ngIf="menuOpened" class="icon">keyboard_arrow_left</mat-icon>
+    <mat-icon *ngIf="!menuOpened" class="icon">keyboard_arrow_right</mat-icon>
+  </div>
+</div>
