@@ -9,16 +9,25 @@
     (cdkDropListDropped)="drop(project, $event)"
   >
     <div class="dash-header">
-      <span>Name</span>
-      <span>person</span>
+      <span class="name">Name</span>
+      <span class="person">person</span>
       <span>status</span>
       <span>comments</span>
     </div>
     <div class="dash-item" *ngFor="let item of project.list" cdkDrag>
-      <span>{{ item.name }}</span>
-      <span><app-avatar [img]="img"></app-avatar></span>
-      <span class="doing">{{ item.status }}</span>
-      <span><mat-icon class="icon" matBadge="4">message</mat-icon></span>
+      <span class="name">
+        <input type="text" [(ngModel)]="item.name"><!--(focusout)="saveName(project)-->
+        <button mat-button matSuffix mat-icon-button (click)="saveName(project)">
+          <mat-icon>check</mat-icon>
+        </button>
+      </span>
+      <span class="person"><app-avatar [img]="img"></app-avatar></span>
+      <span class="status">{{ item.status }}</span>
+      <span>
+        <button mat-button matSuffix mat-icon-button>
+          <mat-icon class="icon" matBadge="4">message</mat-icon>
+        </button>
+      </span>
     </div>
     <div class="dash-item-new">
       <input type="text" [(ngModel)]="newItem" placeholder="+ Nova tarefa" (keyup.enter)="addItem(project)">

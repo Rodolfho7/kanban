@@ -96,4 +96,8 @@ export class DashboardComponent implements OnInit {
       this.projects.push(project);
     });
   }
+
+  saveName(project: Project): void {
+    console.log(project);
+  }
 }

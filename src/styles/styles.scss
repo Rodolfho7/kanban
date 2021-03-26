@@ -7,3 +7,13 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: $gray;
 }
+
+.btn-primary {
+  background-color: $primary;
+  color: $white;
+}
+
+.btn-danger {
+  background-color: $red;
+  color: $white;
+}

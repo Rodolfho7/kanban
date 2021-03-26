@@ -34,22 +34,14 @@
     }
   }
 
-  .dash-item-new {
-    height: 50px;
-    background-color: white;
-    color: black;
-    border-left: 10px solid $gray;
-    margin-bottom: 6px;
+  .dash-header {
+    margin-bottom: 10px;
+    padding-left: 5px;
     display: flex;
-    align-items: center;
-    transition: 0.2s;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    input {
-      height: 100%;
-      width: 100%;
-      padding-left: 15px;
-      border: none;
+
+    span {
+      width: 25%;
+      text-align: center;
     }
   }
 
@@ -74,7 +66,7 @@
       color: $white;
     }
 
-    .doing {
+    .status {
       background-color: $green;
       color: $white;
     }
@@ -87,6 +79,32 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
+      border-right: 2px solid $gray;
+      &:last-child {
+        border: none;
+      }
+    }
+
+    .name {
+      position: relative;
+      button {
+        visibility: hidden;
+        // visibility: visible;
+        position: absolute;
+        right: 0;
+      }
+      input {
+        border: none;
+        height: 100%;
+        width: 100%;
+        padding-right: 40px;
+        padding-left: 20px;
+        background: transparent;
+        &:focus + button {
+          visibility: visible;
+        }
+      }
     }
 
     mat-icon {
@@ -94,14 +112,30 @@
     }
   }
 
-  .dash-header {
-    margin-bottom: 10px;
-    padding-left: 5px;
-    display: flex;
+  .person {
+    width: 10% !important;
+  }
 
-    span {
-      width: 25%;
-      text-align: center;
+  .name {
+    width: 40% !important;
+  }
+
+  .dash-item-new {
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-left: 10px solid $gray;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    input {
+      height: 100%;
+      width: 100%;
+      padding-left: 15px;
+      border: none;
     }
   }
 }
