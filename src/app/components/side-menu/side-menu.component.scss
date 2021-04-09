@@ -64,8 +64,17 @@
         width: 100%;
 
         &:hover {
-          background-color: $primary-light;
+          background-color: $gray;
           cursor: pointer;
+          transition: 0.3s;
+          .icon {
+            color: $primary;
+          }
+          a {
+            .title {
+              color: $primary;
+            }
+          }
         }
       }
 
@@ -125,5 +134,19 @@
 }
 
 .active {
-  background-color: $primary-light;
+  background-color: $gray;
+  &::before {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    left: 20px;
+    background-color: blue;
+  }
+  .icon {
+    color: $primary;
+  }
+  .title {
+    color: $primary;
+  }
 }
