@@ -10,7 +10,7 @@
       <li>
         <a routerLink="/dashboard" routerLinkActive="active">
           <mat-icon class="icon">person</mat-icon>
-          <span class="title">Profile</span>
+          <span class="title">Projects</span>
         </a>
       </li>
       <li>
@@ -41,9 +41,5 @@
       </div>
       <span class="user-name">Rodolfho azevedo</span>
     </div>
-  </div>
-  <div class="toggle" [ngClass]="menuOpened ? 'open' : ''" (click)="toggleMenu()">
-    <mat-icon *ngIf="menuOpened" class="icon">keyboard_arrow_left</mat-icon>
-    <mat-icon *ngIf="!menuOpened" class="icon">keyboard_arrow_right</mat-icon>
   </div>
 </div>

@@ -2,18 +2,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NewProjectDialogComponent } from '../../components/new-project-dialog/new-project-dialog.component';
-
-type Todo = {
-  name: string;
-  person: string;
-  status: string;
-  comments: string;
-};
-
-type Project = {
-  name: string;
-  list: Todo[];
-}
+import { Project, Todo } from '../../entities/project';
 
 @Component({
   selector: 'app-dashboard',

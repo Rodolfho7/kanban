@@ -27,6 +27,7 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { NewProjectDialogComponent } from './components/new-project-dialog/new-project-dialog.component';
+import { ProjectItemComponent } from './components/project-item/project-item.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NewProjectDialogComponent } from './components/new-project-dialog/new-p
     SideMenuComponent,
     DashboardComponent,
     AvatarComponent,
-    NewProjectDialogComponent
+    NewProjectDialogComponent,
+    ProjectItemComponent
   ],
   imports: [
     BrowserModule,

@@ -9,8 +9,4 @@ export class SideMenuComponent {
   @Input() menuOpened: boolean = false;
   img = 'https://www.istockphoto.com/resources/images/PhotoFTLP/Signature-1205756464.jpg';
   constructor() { }
-
-  toggleMenu() {
-    this.menuOpened = !this.menuOpened;
-  }
 }

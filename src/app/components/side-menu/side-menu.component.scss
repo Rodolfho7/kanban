@@ -17,7 +17,7 @@
     transition: 0.3s;
     z-index: 999;
 
-    &.open {
+    &:hover {
       width: 200px;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5)
     }
@@ -107,30 +107,30 @@
     }
   }
 
-  .toggle {
-    position: absolute;
-    width: 20px;
-    height: 40px;
-    background-color: $primary;
-    cursor: pointer;
-    top: calc(50% - 20px);
-    left: 56px;
-    border: 5px solid $primary;
-    border-radius: 0 25px 25px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    z-index: 998;
+  // .toggle {
+  //   position: absolute;
+  //   width: 20px;
+  //   height: 40px;
+  //   background-color: $primary;
+  //   cursor: pointer;
+  //   top: calc(50% - 20px);
+  //   left: 56px;
+  //   border: 5px solid $primary;
+  //   border-radius: 0 25px 25px 0;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   transition: 0.3s;
+  //   z-index: 998;
 
-    mat-icon {
-      color: $white;
-    }
+  //   mat-icon {
+  //     color: $white;
+  //   }
 
-    &.open {
-      left: 196px;
-    }
-  }
+  //   &.open {
+  //     left: 196px;
+  //   }
+  // }
 }
 
 .active {

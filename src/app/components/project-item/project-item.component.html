@@ -1,0 +1,15 @@
+<div class="dash-item">
+  <span class="name">
+    <input type="text" [(ngModel)]="item.name"><!--(focusout)="saveName(project)-->
+    <button mat-button matSuffix mat-icon-button (click)="saveName(project)">
+      <mat-icon>check</mat-icon>
+    </button>
+  </span>
+  <span class="person"><app-avatar [img]="img"></app-avatar></span>
+  <span class="status">{{ item.status }}</span>
+  <span>
+    <button mat-button matSuffix mat-icon-button>
+      <mat-icon class="icon" matBadge="4">message</mat-icon>
+    </button>
+  </span>
+</div>
