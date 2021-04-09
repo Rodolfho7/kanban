@@ -11,39 +11,40 @@ import { Project, Todo } from '../../entities/project';
 })
 export class DashboardComponent implements OnInit {
   img = 'https://www.istockphoto.com/resources/images/PhotoFTLP/Signature-1205756464.jpg';
-  newItem: string;
 
   projects: Project[] = [
     {
       name: 'Site do clan',
+      newItem: '',
       list: [
         {
           name: 'criar home page',
           person: 'rodolfho',
-          status: 'doing',
+          status: 'A fazer',
           comments: 'sem comentários'
         },
         {
           name: 'criar pagina de fale conosco',
           person: 'rodolfho',
-          status: 'pendent',
+          status: 'Pendente',
           comments: 'falta fazer'
         }
       ]
     },
     {
       name: 'Dashboard Controle',
+      newItem: '',
       list: [
         {
           name: 'limpar a casa',
           person: 'rodolfho',
-          status: 'doing',
+          status: 'Fazendo',
           comments: 'sem comentários'
         },
         {
           name: 'comprar pamonha',
           person: 'rodolfho',
-          status: 'pendent',
+          status: 'Pendente',
           comments: 'falta fazer'
         }
       ]
@@ -60,14 +61,13 @@ export class DashboardComponent implements OnInit {
 
   addItem(project: Project) {
     const item: Todo = {
-      name: this.newItem,
+      name: project.newItem,
       person: null,
-      status: 'pendent',
+      status: 'Pendente',
       comments: 'no comments'
     };
-
+    project.newItem = '';
     project.list.push(item);
-    this.newItem = '';
   }
 
   createNewProject(): void {
@@ -80,13 +80,14 @@ export class DashboardComponent implements OnInit {
       }
       const project: Project = {
         name: resultName,
+        newItem: '',
         list: []
       };
       this.projects.push(project);
     });
   }
 
-  saveName(project: Project): void {
-    console.log(project);
-  }
+  // saveName(project: Project): void {
+  //   console.log(project);
+  // }
 }

@@ -2,14 +2,14 @@
 
 .dash-item {
   height: 50px;
-  background-color: white;
+  background-color: rgb(231, 231, 231);
   color: black;
   border-left: 10px solid $primary;
   margin-bottom: 6px;
   display: flex;
   align-items: center;
   transition: 0.2s;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
   &:hover {
     background-color: $gray;
@@ -18,11 +18,6 @@
 
   .todo {
     background-color: $light;
-    color: $white;
-  }
-
-  .status {
-    background-color: $green;
     color: $white;
   }
 
@@ -69,4 +64,44 @@
 
 .person {
   width: 10% !important;
+}
+
+.doing {
+  background-color: $green;
+  color: $white;
+  &:hover {
+    background-color: $green;
+    filter: brightness(1.3);
+  }
+}
+
+.stuck {
+  background-color: $middle;
+  color: $white;
+  &:hover {
+    background-color: $middle;
+    filter: brightness(1.3);
+  }
+}
+
+.to-do {
+  background-color: $light;
+  color: $white;
+  &:hover {
+    background-color: $light;
+    filter: brightness(1.3);
+  }
+}
+
+.pendent {
+  background-color: $red;
+  color: $white;
+  &:hover {
+    background-color: $red;
+    filter: brightness(1.3);
+  }
+}
+
+.link {
+  cursor: pointer;
 }

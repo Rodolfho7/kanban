@@ -2,7 +2,80 @@
 
 .content-wrapper {
   max-width: 1400px;
-  padding: 15px;
+  padding: 0px;
+  display: flex;
+
+  .dash-menu {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    background-color: $white;
+    overflow: hidden;
+    border-radius: 0px 10px 10px 0px;
+
+    h3 {
+      padding-left: 15px;
+    }
+
+    ul {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+      li {
+        position: relative;
+        list-style: none;
+        width: 100%;
+
+        &:hover {
+          background-color: $light;
+          cursor: pointer;
+          .icon {
+            color: $white;
+          }
+          a {
+            .title {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      a {
+        position: relative;
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        color: $primary;
+
+        .icon {
+          position: relative;
+          display: block;
+          min-width: 60px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          font-size: 14px;
+        }
+
+        .title {
+          position: relative;
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .dash-content {
+    transform: translateX(220px);
+    padding-top: 15px;
+  }
 
   app-expansion {
     display: block;
@@ -11,9 +84,8 @@
 
   .title {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 16px;
     color: $black;
-    text-transform: uppercase;
     display: flex;
     align-items: center;
 
@@ -62,7 +134,7 @@
     display: flex;
     align-items: center;
     transition: 0.2s;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     input {
       height: 100%;

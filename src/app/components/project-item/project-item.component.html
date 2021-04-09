@@ -1,12 +1,22 @@
 <div class="dash-item">
   <span class="name">
     <input type="text" [(ngModel)]="item.name"><!--(focusout)="saveName(project)-->
-    <button mat-button matSuffix mat-icon-button (click)="saveName(project)">
+    <button mat-button matSuffix mat-icon-button>
       <mat-icon>check</mat-icon>
     </button>
   </span>
   <span class="person"><app-avatar [img]="img"></app-avatar></span>
-  <span class="status">{{ item.status }}</span>
+  <span [ngClass]="[selectedStatus, 'link']" [matMenuTriggerFor]="statusOptions">
+    {{ item.status }}
+    <mat-menu #statusOptions="matMenu">
+      <button *ngFor="let statusItem of statusList"
+        mat-menu-item
+        [ngClass]="statusItem.className"
+        (click)="setStatus(statusItem)">
+        {{ statusItem.name }}
+      </button>
+    </mat-menu>
+  </span>
   <span>
     <button mat-button matSuffix mat-icon-button>
       <mat-icon class="icon" matBadge="4">message</mat-icon>

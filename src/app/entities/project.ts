@@ -7,5 +7,6 @@ export type Todo = {
 
 export type Project = {
   name: string;
+  newItem: string;
   list: Todo[];
 }

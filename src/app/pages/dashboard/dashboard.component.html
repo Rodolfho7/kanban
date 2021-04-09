@@ -1,26 +1,56 @@
 <div class="content-wrapper">
-  <div class="title">
-    <h1>Meus Projetos</h1><mat-icon (click)="createNewProject()">add</mat-icon>
+  <div class="dash-menu">
+    <h3>Title</h3>
+    <ul>
+      <li>
+        <a routerLink="/kanban" routerLinkActive="active">
+          <mat-icon class="icon">home</mat-icon>
+          <span class="title">Home</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active">
+          <mat-icon class="icon">person</mat-icon>
+          <span class="title">Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon class="icon">message</mat-icon>
+          <span class="title">Message</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon class="icon">help</mat-icon>
+          <span class="title">Help</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <mat-icon class="icon">settings</mat-icon>
+          <span class="title">Settings</span>
+        </a>
+      </li>
+    </ul>
   </div>
-  <app-expansion *ngFor="let project of projects"
-    [name]="project.name"
-    cdkDropList
-    [cdkDropListData]="project.list"
-    (cdkDropListDropped)="drop(project, $event)"
-  >
-    <div class="dash-header">
-      <span class="name">Name</span>
-      <span class="person">person</span>
-      <span>status</span>
-      <span>comments</span>
+  <div class="dash-content">
+    <div class="title">
+      <h1>Meus Projetos</h1>
+      <mat-icon (click)="createNewProject()">add</mat-icon>
     </div>
-    <app-project-item
-      cdkDrag
-      *ngFor="let item of project.list"
-      [item]="item"
-    ></app-project-item>
-    <div class="dash-item-new">
-      <input type="text" [(ngModel)]="newItem" placeholder="+ Nova tarefa" (keyup.enter)="addItem(project)">
-    </div>
-  </app-expansion>
+    <app-expansion *ngFor="let project of projects" [name]="project.name" cdkDropList [cdkDropListData]="project.list"
+      (cdkDropListDropped)="drop(project, $event)">
+      <div class="dash-header">
+        <span class="name">Name</span>
+        <span class="person">person</span>
+        <span>status</span>
+        <span>comments</span>
+      </div>
+      <app-project-item cdkDrag *ngFor="let item of project.list" [item]="item"></app-project-item>
+      <div class="dash-item-new">
+        <input type="text" [(ngModel)]="project.newItem" placeholder="+ Nova tarefa" (keyup.enter)="addItem(project)">
+      </div>
+    </app-expansion>
+  </div>
 </div>
