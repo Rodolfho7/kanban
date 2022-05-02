@@ -28,6 +28,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { NewProjectDialogComponent } from './components/new-project-dialog/new-project-dialog.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
+import { DragDropComponent } from './pages/drag-drop/drag-drop.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ProjectItemComponent } from './components/project-item/project-item.com
     DashboardComponent,
     AvatarComponent,
     NewProjectDialogComponent,
-    ProjectItemComponent
+    ProjectItemComponent,
+    DragDropComponent
   ],
   imports: [
     BrowserModule,

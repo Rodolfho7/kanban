@@ -5,7 +5,10 @@
 
 .container-wrapper {
   display: flex;
-  justify-content: space-between;
+
+  app-expansion {
+    flex-grow: 1;
+  }
 }
 
 .list {

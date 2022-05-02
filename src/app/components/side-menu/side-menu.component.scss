@@ -1,5 +1,33 @@
 @import '../../../styles/colors.scss';
 
+.menu-opened {
+  width: 326px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-button {
+  background-color: #194084;
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  width: calc(100vw - 102px);
+}
+
+.close-toggle-button {
+  left: 85px;
+  transition: 0.3s;
+}
+
+.open-toggle-button {
+  left: 326px;
+  transition: 0.3s;
+}
+
+.menu-closed {
+  width: 85px;
+}
+
 .container {
   position: fixed;
   top:0;
@@ -9,46 +37,11 @@
 
   .navigation {
     position: relative;
-    width: 60px;
     height: 100vh;
-    background-color: $primary;
-    border-radius: 0 10px 10px 0;
+    background-color: #194084;
     overflow: hidden;
     transition: 0.3s;
     z-index: 999;
-
-    &:hover {
-      width: 200px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5)
-    }
-    .userContent {
-      position: absolute;
-      bottom: 10px;
-      left: 7px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      .user {
-        border:3px solid $white;
-        background-color: $primary;
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        flex-shrink: 0;
-        margin-right: 10px;
-        margin-bottom: 12px;
-
-        app-avatar {
-          cursor: pointer;
-        }
-      }
-      .user-name {
-        color: $white;
-      }
-      span {
-        flex-shrink: 0;
-      }
-    }
 
     ul {
       position: absolute;
@@ -60,21 +53,22 @@
 
       li {
         position: relative;
+        left: 25px;
         list-style: none;
         width: 100%;
 
         &:hover {
-          background-color: $gray;
-          cursor: pointer;
-          transition: 0.3s;
-          .icon {
-            color: $primary;
-          }
-          a {
-            .title {
-              color: $primary;
-            }
-          }
+          // background-color: $gray;
+          // cursor: pointer;
+          // transition: 0.3s;
+          // .icon {
+          //   color: #194084;
+          // }
+          // a {
+          //   .title {
+          //     color: #194084;
+          //   }
+          // }
         }
       }
 
@@ -84,24 +78,24 @@
         display: flex;
         text-decoration: none;
         color: $white;
-        font-weight: 500;
 
         .icon {
           position: relative;
           display: block;
           min-width: 60px;
-          height: 60px;
-          line-height: 60px;
+          height: 50px;
+          line-height: 20px;
           text-align: center;
-          font-size: 24px;
+          font-size: 15px;
         }
 
         .title {
           position: relative;
           display: block;
-          height: 60px;
-          line-height: 60px;
+          height: 50px;
+          line-height: 20px;
           white-space: nowrap;
+          font-size: 15px;
         }
       }
     }
@@ -109,19 +103,19 @@
 }
 
 .active {
-  background-color: $gray;
-  &::before {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    top: 20px;
-    left: 20px;
-    background-color: blue;
-  }
-  .icon {
-    color: $primary;
-  }
-  .title {
-    color: $primary;
-  }
+  // background-color: $gray;
+  // &::before {
+  //   position: relative;
+  //   width: 30px;
+  //   height: 30px;
+  //   top: 20px;
+  //   left: 20px;
+  //   background-color: blue;
+  // }
+  // .icon {
+  //   color: #194084;
+  // }
+  // .title {
+  //   color: #194084;
+  // }
 }
